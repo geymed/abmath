@@ -1,0 +1,27 @@
+// This is a DevTable project configuration file. This file is responsible
+// for configuring the different analysis, build, and deploy engines. You
+// can find more information about how to modify this file in the DevTable
+// documentation at https://devtable.com/docs/
+
+profile = DevTable.Profile(
+	Analyze = [python],
+	Build = [appengine_debug],
+	Debug = [appengine_debug, appengine_prod],
+	Deploy = [appengine_prod]
+)
+
+python = Python.Analyzer(
+	Files = Glob('*.py')
+)
+
+appengine_debug = Google.AppEngine.Mimic(
+  Files = ProjectFiles(),
+  AuthorizationProfile = 'GoogleAppEngine',
+  Title = 'Debug Version'
+)
+
+appengine_prod = Google.AppEngine(
+  Files = ProjectFiles(),
+  AuthorizationProfile = 'GoogleAppEngine',
+  Title = 'Production Version'
+)
