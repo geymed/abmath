@@ -6,9 +6,13 @@ function init() {
     var second = Math.floor(Math.random()*10) + 1;
     $("#first").text(first);
     $("#second").text(second);
+    $("#pic").attr("src","");
+    $("#result").val("");
+    $("#result").bind("input",function () { $("#pic").attr("src","");});
     $("#submit").click(function () {
         if (parseInt($("#result").val()) == first+second) {
             $("#pic").attr('src','http://www.worldpeace-uk.org/wp-content/uploads/2013/07/smiley-face.jpg');
+            setTimeout(init,5000);
         } else {
    $("#pic").attr('src','http://vector-magz.com/wp-content/uploads/2013/07/sad-face-clip-art.jpg');
         }
