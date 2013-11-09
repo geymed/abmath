@@ -15,3 +15,8 @@ margin-bottom: 40px;
 #exce {
   font-size:80px;
 }
+
+#result { 
+  line-height:80px;
+  vertical-align:top;
+}
