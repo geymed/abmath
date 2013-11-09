@@ -2,14 +2,14 @@
 
 
 #submitCont {
- background: #CC8888;
-padding: 20px;
-border-radius: 20px;
-margin-top: 86px;
-cursor: pointer;
-text-align: center;
-font-size: 60px;
-margin-bottom: 40px;
+  background: #CC8888;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 86px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 40px;
 }
 
 #exce {
@@ -17,6 +17,9 @@ margin-bottom: 40px;
 }
 
 #result { 
-  line-height:80px;
-  vertical-align:top;
+  line-height: 80px;
+  vertical-align: top;
+  font-size: 80px;
+  width: 200px;
+  text-align: center;
 }
