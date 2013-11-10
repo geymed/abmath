@@ -16,12 +16,21 @@ function init() {
     $("#pic").attr("src","");
     $("#result").val("");
     $("#result").bind("input",function () { $("#pic").attr("src","");});
-    $("#submitCont").click(function () {
+    $("#submitCont").unbind('click').click(function () {
         if (parseInt($("#result").val()) == first+second) {
+          
             $("#pic").attr('src',getRandomPic(abPics));
+            $("#imgHolder").animate({top:'+=50'},2000, function() {
+             
+        $("#imgHolder").animate({top:'-=50'},2000, function() {});
+  });
             setTimeout(init,5000);
         } else {
    $("#pic").attr('src',getRandomPic(pigPics));
+    $("#imgHolder").animate({left:'+=50'},2000, function() {
+             
+        $("#imgHolder").animate({left:'-=50'},2000, function() {});
+  });
         }
     });
 }
@@ -29,7 +38,7 @@ function init() {
 function getRandomPic(pics) {
  return  pics[Math.floor(Math.random()*pics.length)];
 }
-
+//todo add numbers from 1-20 on screen, make images animated
 
 
 $(document).ready(function(){

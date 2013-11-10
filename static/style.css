@@ -10,15 +10,16 @@ body {
 }
 
 #submitCont {
-background: rgba(230,186,100,0.7);
-padding: 20px 0;
-border-radius: 68px;
-cursor: pointer;
-text-align: center;
-font-size: 60px;
-margin-bottom: 40px;
-width: 172px;
-margin: 50px auto;
+  background: rgb(230,186,100);
+  background: rgba(230,186,100,0.7);
+  padding: 20px 0;
+  border-radius: 68px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 40px;
+  width: 172px;
+  margin: 50px auto;
 }
 
 #submitCont IMG{
@@ -41,6 +42,7 @@ padding-top: 50px;
 
 #imgHolder {
   text-align: center;
+  position:relative;
 }
 
 #pic {
