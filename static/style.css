@@ -1,5 +1,13 @@
+body {
+ margin:auto;
+}
 
-
+#cont {
+  background: url(http://fc01.deviantart.net/fs70/f/2011/182/9/4/angry_birds_background_by_gsgill37-d3kogmx.jpg);
+  background-size:cover;
+  width:100%;
+  height:100%;
+}
 
 #submitCont {
 background: #CC8888;
@@ -16,7 +24,7 @@ margin: 50px auto;
 #exce {
  font-size: 80px;
 text-align: center;
-margin-top: 50px;
+padding-top: 50px;
 }
 
 #result { 
