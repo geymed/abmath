@@ -10,17 +10,21 @@ body {
 }
 
 #submitCont {
-background: #CC8888;
+background: rgba(230,186,100,0.7);
 padding: 20px 0;
-border-radius: 20px;
+border-radius: 68px;
 cursor: pointer;
 text-align: center;
 font-size: 60px;
 margin-bottom: 40px;
-width: 300px;
+width: 172px;
 margin: 50px auto;
 }
 
+#submitCont IMG{
+  height:120px;
+  width:auto;
+}
 #exce {
  font-size: 80px;
 text-align: center;

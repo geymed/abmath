@@ -6,7 +6,7 @@ var abPics = ['http://art.ngfiles.com/images/189/lavagasm_angry-birds-star-wars-
               'http://art.ngfiles.com/images/190/lavagasm_angry-birds-star-wars-chewie.png'
               ];
 var pigPics = ['http://cf.broadsheet.ie/wp-content/uploads/2013/04/Angry-Birds-pig.gif',
-                'http://images2.wikia.nocookie.net/__cb20120506164521/abcc/images/thumb/f/f5/Angry_birds_pig_03_by_gsgill37-d3h6acq.jpg/480px-Angry_birds_pig_03_by_gsgill37-d3h6acq.jpg'
+                'http://images.wikia.com/angrybirds/images/2/21/King_pig_corpse.png'
               ] ;
 function init() {
     var first=Math.floor(Math.random()*10) + 1;
