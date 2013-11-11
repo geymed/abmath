@@ -1,36 +1,41 @@
-// smiling face image:http://delhi4cats.files.wordpress.com/2011/05/smiley-face.jpg?w=468&h=468
-// crying face image http://doblelol.com/uploads/20/funny-smiley-face-icons-image-search-results.jpg
-
-var abPics = ['http://art.ngfiles.com/images/189/lavagasm_angry-birds-star-wars-pink.png',
-              'http://art.ngfiles.com/images/157/lavagasm_red-angry-bird.png',
-              'http://art.ngfiles.com/images/190/lavagasm_angry-birds-star-wars-chewie.png'
+/**
+ * Angry Birds Math gamoe for kids
+ * @author Gilad Foyer AKA Geyme
+ */
+var abPics = ['static/images/pink-ab-sw.png',
+              'static/images/angry-bird-red.png',
+              'static/images/angry-bird-war.png'
               ];
-var pigPics = ['http://cf.broadsheet.ie/wp-content/uploads/2013/04/Angry-Birds-pig.gif',
-                'http://images.wikia.com/angrybirds/images/2/21/King_pig_corpse.png'
+var pigPics = ['static/images/pig.gif',
+                'static/images/king-pig.png'
               ] ;
 function init() {
-    var first=Math.floor(Math.random()*10) + 1;
-    var second = Math.floor(Math.random()*10) + 1;
+    var first=Math.floor(Math.random()*6) + 1;
+    var second = Math.floor(Math.random()*6) + 1;
     $("#first").text(first);
     $("#second").text(second);
     $("#pic").attr("src","");
     $("#result").val("");
+    $("#result").focus();
     $("#result").bind("input",function () { $("#pic").attr("src","");});
-    $("#submitCont").unbind('click').click(function () {
+    $("#submitCont").click(function () {
+      
         if (parseInt($("#result").val()) == first+second) {
-          
+          $("#submitCont").unbind('click');
             $("#pic").attr('src',getRandomPic(abPics));
-            $("#imgHolder").animate({top:'+=50'},2000, function() {
+           // $("#imgHolder").animate({top:'+=50'},2000, function() {
              
-        $("#imgHolder").animate({top:'-=50'},2000, function() {});
-  });
+        //$("#imgHolder").animate({top:'-=50'},2000, function() {});
+  //});
             setTimeout(init,5000);
         } else {
    $("#pic").attr('src',getRandomPic(pigPics));
-    $("#imgHolder").animate({left:'+=50'},2000, function() {
+   $("#result").val("");
+   $("#result").focus();
+    //$("#imgHolder").animate({left:'+=50'},2000, function() {
              
-        $("#imgHolder").animate({left:'-=50'},2000, function() {});
-  });
+      //  $("#imgHolder").animate({left:'-=50'},2000, function() {});
+  //});
         }
     });
 }
