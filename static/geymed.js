@@ -19,33 +19,33 @@ var pigPics = ['static/images/pig.gif',
               $.extend({abMath: (function () {  
                  var abm = {
  init:function () {
-    var first=Math.floor(Math.random()*6) + 1;
-    var second = Math.floor(Math.random()*6) + 1;
-    $("#first").text(first);
-    $("#second").text(second);
-    $("#pic").attr("src","");
-    $("#result").val("");
-    $("#result").focus();
-    $("#result").bind("input",function () { $("#pic").attr("src","");});
-    $("#submitCont").click(function () {
-      
-        if (parseInt($("#result").val()) == first+second) {
-          $("#submitCont").unbind('click');
-            $("#pic").attr('src',abm.getRandomPic(abPics));
-           // $("#imgHolder").animate({top:'+=50'},2000, function() {
-             
-        //$("#imgHolder").animate({top:'-=50'},2000, function() {});
-  //});
-            setTimeout(abm.init,5000);
-        } else {
-   $("#pic").attr('src',abm.getRandomPic(pigPics));
-   $("#result").val("");
-   $("#result").focus();
-    //$("#imgHolder").animate({left:'+=50'},2000, function() {
-             
-      //  $("#imgHolder").animate({left:'-=50'},2000, function() {});
-  //});
-        }
+        var first=Math.floor(Math.random()*6) + 1;
+        var second = Math.floor(Math.random()*6) + 1;
+        $("#first").text(first);
+        $("#second").text(second);
+        $("#pic").attr("src","");
+        $("#result").val("");
+        $("#result").focus();
+        $("#result").bind("input",function () { $("#pic").attr("src","");});
+        $("#submitCont").click(function () {
+          
+            if (parseInt($("#result").val()) == first+second) {
+              $("#submitCont").unbind('click');
+                $("#pic").attr('src',abm.getRandomPic(abPics));
+               // $("#imgHolder").animate({top:'+=50'},2000, function() {
+                 
+            //$("#imgHolder").animate({top:'-=50'},2000, function() {});
+      //});
+                setTimeout(abm.init,5000);
+            } else {
+       $("#pic").attr('src',abm.getRandomPic(pigPics));
+       $("#result").val("");
+       $("#result").focus();
+        //$("#imgHolder").animate({left:'+=50'},2000, function() {
+                 
+          //  $("#imgHolder").animate({left:'-=50'},2000, function() {});
+      //});
+            }
     });
 },
 
