@@ -49,3 +49,16 @@ padding-top: 50px;
   width:200px;
   height:auto;
 }
+
+.num {
+  display: inline-block;
+  padding: 10;
+  background: rgba(50,145,99,0.5);
+  margin: 10px;
+  width: 36px;
+  font-family: arial;
+  font-size: 30;
+  text-align: center;
+  border-radius: 35;
+  cursor: pointer;
+}

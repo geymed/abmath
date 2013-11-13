@@ -1,5 +1,5 @@
 /**
- * Angry Birds Math gamoe for kids
+ * Angry Birds Math game for kids
  * @author Gilad Foyer AKA Geymed
  * 
  */
@@ -15,12 +15,28 @@ var pigPics = ['static/images/pig.gif',
                 'static/images/king-pig.png'
                 
               ] ;
-            
-              $.extend({abMath: (function () {  
+var MAX = 6;            
+$.extend({abMath: (function () {  
                  var abm = {
  init:function () {
-        var first=Math.floor(Math.random()*6) + 1;
-        var second = Math.floor(Math.random()*6) + 1;
+      abm.initNumbers();
+      abm.refresh();
+},
+initNumbers: function() {
+  for (var i = 1; i<=MAX*2;i++) {
+    var num = $("<div class='num'></div>");
+    num.text(i);
+    $('#numbers').append(num);
+    
+  } 
+  $('.num').click(function() {
+      $('#result').val($(this).text());
+    });
+},
+refresh:function () {
+   var first=Math.floor(Math.random()*MAX) + 1;
+        var second = Math.floor(Math.random()*MAX) + 1;
+        
         $("#first").text(first);
         $("#second").text(second);
         $("#pic").attr("src","");
@@ -36,7 +52,7 @@ var pigPics = ['static/images/pig.gif',
                  
             //$("#imgHolder").animate({top:'-=50'},2000, function() {});
       //});
-                setTimeout(abm.init,5000);
+                setTimeout(abm.refresh,5000);
             } else {
        $("#pic").attr('src',abm.getRandomPic(pigPics));
        $("#result").val("");
@@ -48,7 +64,6 @@ var pigPics = ['static/images/pig.gif',
             }
     });
 },
-
 getRandomPic:function (pics) {
  return  pics[Math.floor(Math.random()*pics.length)];
 }
