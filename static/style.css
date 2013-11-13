@@ -28,17 +28,23 @@ body {
 }
 #exce {
  font-size: 80px;
-text-align: center;
-padding-top: 50px;
+ text-align: center;
+ padding-top: 25px;;
 }
 
 #result { 
-  line-height: 80px;
-  vertical-align: top;
-  font-size: 80px;
-  width: 200px;
+  font-size: 70px;
+  width: 145px;
   text-align: center;
+  background-image: url(images/cloud-md.png);
+  display: inline-block;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: cursive;
+  height: 125px;
+  color: #aa6655;
 }
+
 
 #imgHolder {
   text-align: center;

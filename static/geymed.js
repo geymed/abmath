@@ -30,7 +30,8 @@ initNumbers: function() {
     
   } 
   $('.num').click(function() {
-      $('#result').val($(this).text());
+      $('#result').text($(this).text());
+       abm.clearPic();
     });
 },
 refresh:function () {
@@ -39,13 +40,11 @@ refresh:function () {
         
         $("#first").text(first);
         $("#second").text(second);
-        $("#pic").attr("src","");
-        $("#result").val("");
-        $("#result").focus();
-        $("#result").bind("input",function () { $("#pic").attr("src","");});
+        abm.clearPic();
+        abm.clearResult();
         $("#submitCont").click(function () {
           
-            if (parseInt($("#result").val()) == first+second) {
+            if (parseInt($("#result").text()) == first+second) {
               $("#submitCont").unbind('click');
                 $("#pic").attr('src',abm.getRandomPic(abPics));
                // $("#imgHolder").animate({top:'+=50'},2000, function() {
@@ -55,14 +54,20 @@ refresh:function () {
                 setTimeout(abm.refresh,5000);
             } else {
        $("#pic").attr('src',abm.getRandomPic(pigPics));
-       $("#result").val("");
-       $("#result").focus();
+      abm.clearResult();
+       
         //$("#imgHolder").animate({left:'+=50'},2000, function() {
                  
           //  $("#imgHolder").animate({left:'-=50'},2000, function() {});
       //});
             }
     });
+},
+clearResult: function () {
+   $("#result").text("?");
+},
+clearPic:function() {
+  $("#pic").attr("src","");
 },
 getRandomPic:function (pics) {
  return  pics[Math.floor(Math.random()*pics.length)];
