@@ -9,13 +9,16 @@
     // Global `vars` and `consts`    
 var abPics = ['static/images/pink-ab-sw.png',
               'static/images/angry-bird-red.png',
-              'static/images/angry-bird-war.png'
+              'static/images/angry-bird-war.png',
+              'static/images/angry-bird-black.png',
+              'static/images/angry-bird-white.png'
+              
               ];
 var pigPics = ['static/images/pig.gif',
                 'static/images/king-pig.png'
                 
               ] ;
-var MAX = 6;            
+var MAX = 10;            
 $.extend({abMath: (function () {  
                  var abm = {
  init:function () {

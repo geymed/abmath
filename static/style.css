@@ -18,12 +18,12 @@ body {
   text-align: center;
   font-size: 60px;
   margin-bottom: 40px;
-  width: 120px;
+  width: 100px;
   margin:30 auto 40px;
 }
 
 #submitCont IMG{
-  height:80px;
+  height:55px;
   width:auto;
 }
 #exce {
@@ -56,9 +56,17 @@ body {
   height:auto;
 }
 
+#numbers {
+  text-align:center;
+}
+
+#btc-quote{
+  position: absolute;
+  top: 500;
+}
 .num {
   display: inline-block;
-  padding: 10;
+  padding: 10px;
   background: rgba(50,145,99,0.5);
   margin: 10px;
   width: 36px;
