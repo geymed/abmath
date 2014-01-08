@@ -5,11 +5,13 @@ threadsafe: true
 api_version: 1
 
 handlers:
-- url: /
-  script: giladfoyer.app
+
 
 - url: /static
   static_dir: static
+  
+- url: /.*
+  script: giladfoyer.app
 
 libraries:
 - name: webapp2
