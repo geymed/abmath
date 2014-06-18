@@ -1,7 +1,6 @@
 /**
  * Angry Birds Math game for kids
  * @author Gilad Foyer AKA Geymed
- * added comment
  *
  */
 ;(function ($) {
