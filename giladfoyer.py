@@ -14,9 +14,9 @@ class MainHandler(webapp2.RequestHandler):
     
 class RTHandler(webapp2.RequestHandler):
   def get(self):
-    name = self.request.get('name')
+   # name = self.request.get('name')
     template_values = {
-      'name': name
+      'name': 'name',
     }
 
     path = os.path.join(os.path.dirname(__file__), 'runtime.html')
