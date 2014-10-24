@@ -19,6 +19,25 @@
 
   ] ;
 
+  var ops = [
+    {
+      name:'plus',
+      sign:'+',
+      op: function (a,b) {return a+b;},
+      genFirst: function (max) { return Math.floor(Math.random()*max) + 1;},
+      genSec: function (max,first) { return Math.floor(Math.random()*max) + 1;}
+
+     },
+    {
+      name:'minus',
+      sign:'-',
+      op: function (a,b) {return a-b;},
+      genFirst: function (max) { return Math.floor(Math.random()*max*2) + 1;},
+      genSec: function (max,first) { return Math.floor(Math.random()*first) + 1;}
+
+    },
+];
+
   var MAX = 10;
   $.extend({abMath: (function () {
     var abm = {
@@ -39,21 +58,22 @@
         });
       },
       refresh:function () {
-        var first=Math.floor(Math.random()*MAX) + 1;
-        var second = Math.floor(Math.random()*MAX) + 1;
+        var op = getRandomElement(ops);
+        var first= op.getFirst(MAX);
+        var second = op.genSec(MAX,first);
 
         $("#first").text(first);
         $("#second").text(second);
         abm.clearPic();
         abm.clearResult();
         $("#submitCont").click(function () {
-          if (parseInt($("#result").text()) == first+second) {
+          if (parseInt($("#result").text()) == calc(op,first,second) {
             $("#submitCont").unbind('click');
-            $("#pic").attr('src',abm.getRandomPic(abPics));
+            $("#pic").attr('src',abm.getRandomElement(abPics));
 
             setTimeout(abm.refresh,2000);
           } else {
-            $("#pic").attr('src',abm.getRandomPic(pigPics));
+            $("#pic").attr('src',abm.getRandomElement(pigPics));
             abm.clearResult();
           }
         });
@@ -64,9 +84,14 @@
       clearPic:function() {
         $("#pic").attr("src","");
       },
-      getRandomPic:function (pics) {
-        return  pics[Math.floor(Math.random()*pics.length)];
+      getRandomElement:function (elements) {
+        return  elements[Math.floor(Math.random()*elements.length)];
+      },
+      getRandom
+      calc: function (op, first, second) {
+        return op.op(first,second);
       }
+
 
     };
     return {
