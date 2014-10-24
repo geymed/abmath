@@ -48,7 +48,7 @@ refresh:function () {
         abm.clearResult();
         $("#submitCont").click(function () {
           if (parseInt($("#result").val()) == first+second) {
->               $("#submitCont").unbind('click');
+                $("#submitCont").unbind('click');
                 $("#pic").attr('src',abm.getRandomPic(abPics));
                // $("#imgHolder").animate({top:'+=50'},2000, function() {
 
