@@ -51,11 +51,10 @@
             $("#submitCont").unbind('click');
             $("#pic").attr('src',abm.getRandomPic(abPics));
 
-            setTimeout(abm.refresh,5000);
+            setTimeout(abm.refresh,2000);
           } else {
             $("#pic").attr('src',abm.getRandomPic(pigPics));
             abm.clearResult();
-
           }
         });
       },
