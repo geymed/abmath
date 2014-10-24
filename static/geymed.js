@@ -32,8 +32,8 @@
       name:'minus',
       sign:'-',
       op: function (a,b) {return a-b;},
-      genFirst: function (max) { return Math.floor(Math.random()*max*2) + 1;},
-      genSec: function (max,first) { return Math.floor(Math.random()*first) + 1;}
+      genFirst: function (max) { return Math.floor(Math.random()*max*2) + 2;},
+      genSec: function (max,first) { return Math.floor(Math.random()*(first - 1)) + 1;}
 
     },
 ];
