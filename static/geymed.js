@@ -66,8 +66,7 @@
         $("#second").text(second);
         abm.clearPic();
         abm.clearResult();
-        $("#submitCont").click(function () {
-          if (parseInt($("#result").text()) == abm.calc(op,first,second) {
+        $("#submitCont").click(function () {          if (parseInt($("#result").text()) == abm.calc(op,first,second)) {
             $("#submitCont").unbind('click');
             $("#pic").attr('src',abm.getRandomElement(abPics));
 
