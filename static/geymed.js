@@ -58,7 +58,7 @@
         });
       },
       refresh:function () {
-        var op = getRandomElement(ops);
+        var op = abm.getRandomElement(ops);
         var first= op.getFirst(MAX);
         var second = op.genSec(MAX,first);
 
@@ -67,7 +67,7 @@
         abm.clearPic();
         abm.clearResult();
         $("#submitCont").click(function () {
-          if (parseInt($("#result").text()) == calc(op,first,second) {
+          if (parseInt($("#result").text()) == abm.calc(op,first,second) {
             $("#submitCont").unbind('click');
             $("#pic").attr('src',abm.getRandomElement(abPics));
 
