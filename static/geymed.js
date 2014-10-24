@@ -86,7 +86,6 @@
       getRandomElement:function (elements) {
         return  elements[Math.floor(Math.random()*elements.length)];
       },
-      getRandom
       calc: function (op, first, second) {
         return op.op(first,second);
       }
