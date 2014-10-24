@@ -1,7 +1,6 @@
 Geymed
 ======
 
-My First Git Repo
+AngryBirds themed kids simple math game.
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/geymed/geymed/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
+[Play It!](http://geymed.github.io/Geymed/)

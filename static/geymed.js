@@ -103,5 +103,4 @@
   $(document).ready(function(){
     $.abMath.init();
   });
-
-  //TODO add help button with graphic representation of the exercise (x red balls + y green balls, 8 red balls three of them eaten by worms))
+hDO add help button with graphic representation of the exercise (x red balls + y green balls, 8 red balls three of them eaten by worms))
