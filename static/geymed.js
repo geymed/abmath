@@ -64,6 +64,7 @@
 
         $("#first").text(first);
         $("#second").text(second);
+        $("#op").text(op.sign);
         abm.clearPic();
         abm.clearResult();
         $("#submitCont").click(function () {          if (parseInt($("#result").text()) == abm.calc(op,first,second)) {
