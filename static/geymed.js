@@ -1,12 +1,12 @@
 /**
  * Angry Birds Math game for kids
  * @author Gilad Foyer AKA Geymed
- * 
+ *
  */
 ;(function ($) {
     "use strict";
 
-    // Global `vars` and `consts`    
+    // Global `vars` and `consts`
 var abPics = ['static/images/pink-ab-sw.png',
               'static/images/angry-bird-red.png',
               'static/images/angry-bird-war.png',
@@ -16,11 +16,12 @@ var abPics = ['static/images/pink-ab-sw.png',
               ];
 var pigPics = ['static/images/pig.gif',
                 'static/images/king-pig.png'
-                
+
               ] ;
+
 var MAX = 10;            
 $.extend({abMath: (function () {  
-                 var abm = {
+=va abm = {
  init:function () {
       abm.initNumbers();
       abm.refresh();
@@ -30,8 +31,8 @@ initNumbers: function() {
     var num = $("<div class='num'></div>");
     num.text(i);
     $('#numbers').append(num);
-    
-  } 
+
+  }
   $('.num').click(function() {
       $('#result').text($(this).text());
        abm.clearPic();
@@ -40,18 +41,17 @@ initNumbers: function() {
 refresh:function () {
    var first=Math.floor(Math.random()*MAX) + 1;
         var second = Math.floor(Math.random()*MAX) + 1;
-        
+
         $("#first").text(first);
         $("#second").text(second);
         abm.clearPic();
         abm.clearResult();
-        $("#submitCont").click(function () {
-          
-            if (parseInt($("#result").text()) == first+second) {
-              $("#submitCont").unbind('click');
+        $("#submitCont").click(function () {
+          f (parseInt($("#result").val()) == first+second) {
+>               $("#submitCont").unbind('click');
                 $("#pic").attr('src',abm.getRandomPic(abPics));
                // $("#imgHolder").animate({top:'+=50'},2000, function() {
-                 
+
             //$("#imgHolder").animate({top:'-=50'},2000, function() {});
       //});
                 setTimeout(abm.refresh,5000);
@@ -60,7 +60,7 @@ refresh:function () {
       abm.clearResult();
        
         //$("#imgHolder").animate({left:'+=50'},2000, function() {
-                 
+
           //  $("#imgHolder").animate({left:'-=50'},2000, function() {});
       //});
             }
@@ -78,7 +78,7 @@ getRandomPic:function (pics) {
 
 };
   return {
-    init:abm.init  
+    init:abm.init
   }}())});
 }(jQuery));
 //todo add numbers from 1-20 on screen, make images animated
