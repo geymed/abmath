@@ -59,7 +59,7 @@
       },
       refresh:function () {
         var op = abm.getRandomElement(ops);
-        var first= op.getFirst(MAX);
+        var first= op.genFirst(MAX);
         var second = op.genSec(MAX,first);
 
         $("#first").text(first);
