@@ -56,10 +56,6 @@
             $("#pic").attr('src',abm.getRandomPic(pigPics));
             abm.clearResult();
 
-            //$("#imgHolder").animate({left:'+=50'},2000, function() {
-
-            //  $("#imgHolder").animate({left:'-=50'},2000, function() {});
-            //});
           }
         });
       },
