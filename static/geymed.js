@@ -12,16 +12,16 @@ var abPics = ['static/images/pink-ab-sw.png',
               'static/images/angry-bird-war.png',
               'static/images/angry-bird-black.png',
               'static/images/angry-bird-white.png'
-              
+
               ];
 var pigPics = ['static/images/pig.gif',
                 'static/images/king-pig.png'
 
               ] ;
 
-var MAX = 10;            
-$.extend({abMath: (function () {  
-=va abm = {
+var MAX = 10;
+$.extend({abMath: (function () {
+var abm = {
  init:function () {
       abm.initNumbers();
       abm.refresh();
@@ -58,7 +58,7 @@ refresh:function () {
             } else {
        $("#pic").attr('src',abm.getRandomPic(pigPics));
       abm.clearResult();
-       
+
         //$("#imgHolder").animate({left:'+=50'},2000, function() {
 
           //  $("#imgHolder").animate({left:'-=50'},2000, function() {});
