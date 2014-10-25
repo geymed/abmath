@@ -11,6 +11,9 @@
   'static/images/angry-bird-red.png',
   'static/images/angry-bird-war.png',
   'static/images/angry-bird-black.png',
+  'static/images/angry-bird-green.png',
+  'static/images/angry-bird-orange.png',
+  'static/images/angry-bird-blue.png',
   'static/images/angry-bird-white.png'
 
   ];
