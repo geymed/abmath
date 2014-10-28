@@ -79,7 +79,7 @@
         $("#op").text(op.sign);
         abm.clearPic();
         abm.clearResult();
-        $("#submitCont").click(function () {
+        $("#submitCont").on('click',function () {
           $('#pic').removeClass('animated bounce wobble');
           if (parseInt($("#result").text()) == abm.calc(op,first,second)) {
             $("#submitCont").unbind('click');
