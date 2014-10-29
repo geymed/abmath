@@ -41,7 +41,7 @@
     },
     {
       name:'multiply',
-      sign:'*',
+      sign:'x',
       op: function (a,b) {return a*b;},
       genFirst: function (max) { return Math.floor(Math.random()*max/2) + 1;},
       genSec: function (max,first) { return Math.floor(Math.random()*((max*2)/first)) + 1;}
@@ -79,7 +79,8 @@
         $("#op").text(op.sign);
         abm.clearPic();
         abm.clearResult();
-        $("#submitCont").click(function () {          if (parseInt($("#result").text()) == abm.calc(op,first,second)) {
+        $("#submitCont").click(function () {
+          if (parseInt($("#result").text()) == abm.calc(op,first,second)) {
             $("#submitCont").unbind('click');
             $("#pic").attr('src',abm.getRandomElement(abPics));
 
