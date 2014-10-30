@@ -88,7 +88,7 @@
             $('#pic').addClass('animated bounce');
 
             $('#pic').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
-                function () {setTimeout(abm.refresh,2000);});
+                function () {abm.refresh();});
 
           } else {
             $("#pic").attr('src',abm.getRandomElement(pigPics));
