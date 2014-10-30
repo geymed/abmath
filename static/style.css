@@ -30,9 +30,10 @@ body {
  font-size: 80px;
  text-align: center;
  padding-top: 25px;
+ font-family: 'Stalemate', cursive;
 }
 
-#result { 
+#result {
   font-size: 70px;
   width: 145px;
   text-align: center;
