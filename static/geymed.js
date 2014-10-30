@@ -81,25 +81,33 @@
         abm.clearPic();
         abm.clearResult();
         $("#submitCont").on('click',function () {
-          $('#pic').removeClass('animated bounce wobble');
+
           if (parseInt($("#result").text()) == abm.calc(op,first,second)) {
             $("#submitCont").unbind('click');
             $("#pic").attr('src',abm.getRandomElement(abPics));
             $('#pic').addClass('animated bounce');
 
-            setTimeout(abm.refresh,2000);
+            $('#pic').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+                function () {setTimeout(abm.refresh,2000);});
+
           } else {
             $("#pic").attr('src',abm.getRandomElement(pigPics));
             $('#pic').addClass('animated wobble');
-            abm.clearResult();
+            $('#pic').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+                function () {abm.clearResult();});
+
+
           }
         });
       },
       clearResult: function () {
         $("#result").text("?");
+        $('#pic').removeClass('animated bounce wobble');
+
       },
       clearPic:function() {
         $("#pic").attr("src","");
+
       },
       getRandomElement:function (elements) {
         return  elements[Math.floor(Math.random()*elements.length)];
