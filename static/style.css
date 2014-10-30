@@ -27,21 +27,21 @@ body {
   width:auto;
 }
 #exce {
- font-size: 80px;
+ font-size: 100px;
  text-align: center;
  padding-top: 25px;
  font-family: 'Stalemate', cursive;
 }
 
 #result {
-  font-size: 70px;
+  font-size: 100px;
   width: 145px;
   text-align: center;
   background-image: url(images/cloud-md.png);
   display: inline-block;
   background-size: 100%;
   background-repeat: no-repeat;
-  font-family: cursive;
+  font-family: 'Stalemate', cursive;
   height: 125px;
   color: #aa6655;
 }
