@@ -1,7 +1,7 @@
 Geymed
 ======
 
-AngryBirds themed simple kids math game.
+AngryBirds themed simple math game for kids.
 
 [Play It!](http://geymed.github.io/abmath/)
 
