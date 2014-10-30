@@ -19,7 +19,7 @@ body {
   font-size: 60px;
   margin-bottom: 40px;
   width: 100px;
-  margin:10 auto 40px;
+  margin:0 auto 20px;
 }
 
 #submitCont IMG{
@@ -42,7 +42,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   font-family: 'Stalemate', cursive;
-  height: 125px;
+  height: 120px;
   color: #aa6655;
 }
 
