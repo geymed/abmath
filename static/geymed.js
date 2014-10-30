@@ -54,11 +54,11 @@
   $.extend({abMath: (function () {
     var abm = {
       init:function () {
-        abm.initNumbers();
+        abm.initNumbers(MAX);
         abm.refresh();
       },
-      initNumbers: function() {
-        for (var i = 1; i<=MAX*2;i++) {
+      initNumbers: function(max) {
+        for (var i = 1; i<=(Math.ceil(max/2))^2;i++) {
           var num = $("<div class='num'></div>");
           num.text(i);
           $('#numbers').append(num);
