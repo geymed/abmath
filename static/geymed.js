@@ -58,7 +58,7 @@
         abm.refresh();
       },
       initNumbers: function(max) {
-        for (var i = 1; i<=(Math.ceil(max/2))^2;i++) {
+        for (var i = 1; i<=(Math.floor(max/2))^2;i++) {
           var num = $("<div class='num'></div>");
           num.text(i);
           $('#numbers').append(num);
