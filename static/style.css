@@ -30,7 +30,7 @@ body {
  font-size: 100px;
  text-align: center;
  padding-top: 25px;
- font-family: 'Stalemate', cursive;
+font-family: 'Jura', sans-serif;
 }
 
 #result {
@@ -41,7 +41,7 @@ body {
   display: inline-block;
   background-size: 100%;
   background-repeat: no-repeat;
-  font-family: 'Stalemate', cursive;
+  font-family: 'Jura', sans-serif;
   height: 125px;
   color: #aa6655;
 }
