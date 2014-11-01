@@ -58,7 +58,7 @@
         abm.refresh();
       },
     initNumbers: function(max) {
-        var numCount = Math.pow((Math.floor(max/2)),2);
+        var numCount = Math.pow((Math.floor(max/2)),2) - 1 ;
         for (var i = 1; i<= numCount ;i++) {
           var numClass = max > 10 ? "numsmall" : "num";
           var num = $("<div class='" + numClass +"'></div>");
