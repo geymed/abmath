@@ -57,15 +57,16 @@
         abm.initNumbers(MAX);
         abm.refresh();
       },
-      initNumbers: function(max) {
-        var numCount = Math.pow((Math.floor(max/2)),2) - 1;
+    initNumbers: function(max) {
+        var numCount = Math.pow((Math.floor(max/2)),2);
         for (var i = 1; i<= numCount ;i++) {
-          var num = $("<div class='num'></div>");
+          var numClass = max > 10 ? "numsmall" : "num";
+          var num = $("<div class='" + numClass +"'></div>");
           num.text(i);
           $('#numbers').append(num);
 
         }
-        $('.num').click(function() {
+        $('.'+numClass).click(function() {
           $('#result').text($(this).text());
           abm.clearPic();
         });
