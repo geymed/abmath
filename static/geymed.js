@@ -50,7 +50,7 @@
 
 ];
 
-  var MAX = 20;
+  var MAX = 22;
   $.extend({abMath: (function () {
     var abm = {
       init:function () {
