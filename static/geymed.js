@@ -38,7 +38,7 @@
       genFirst: function (max) { return Math.floor(Math.random()*max*2) + 2;},
       genSec: function (max,first) { return Math.floor(Math.random()*(first - 1)) + 1;}
 
-    },
+    }/*,
     {
       name:'multiply',
       sign:'x',
@@ -47,10 +47,11 @@
       genSec: function (max,first) { return Math.floor(Math.random()*((max*2)/first)) + 1;}
 
     }
+    */
 
 ];
 
-  var MAX = 22;
+  var MAX = 10;
   $.extend({abMath: (function () {
     var abm = {
       init:function () {
